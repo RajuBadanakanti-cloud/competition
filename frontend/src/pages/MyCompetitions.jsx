@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getUserParticipations } from "../services/participationApi";
 
-const DEMO_USER_ID = "6aba20180dd0b90fe7958560";
+const DEMO_USER_ID = "6aba542c8e59cebdafe51fd7";
 
 const MyCompetitions = () => {
   const [participations, setParticipations] = useState([]);

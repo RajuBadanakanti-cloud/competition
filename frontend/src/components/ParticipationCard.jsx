@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { registerForCompetition } from "../services/participationApi";
 
-const DEMO_USER_ID = "6aba20180dd0b90fe7958560"; // just for testing..
+const DEMO_USER_ID = "6aba542c8e59cebdafe51fd7"; // just for testing..
 
 const ParticipationCard = ({
   participation,

@@ -18,7 +18,7 @@ import { getUserParticipations } from "../services/participationApi";
 const CompetitionDetails = () => {
   // Temporary demo user
   // Use the same real User _id that you used during registration
-const DEMO_USER_ID = "6aba20180dd0b90fe7958560"; // just for testing
+const DEMO_USER_ID = "6aba542c8e59cebdafe51fd7"; // testing..
 
   // Get competition ID from:
   // /competition/:id
