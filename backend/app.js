@@ -14,7 +14,9 @@ import gloablErrorHandler from './middlewares/globalErrorMid.js'
 
 const app = express()
 app.use(helmet())
-app.use(cors())
+app.use(cors({
+    origin:process.env.FRONTEND_URL
+})) // conncection with frontend
 app.use(express.json())
 
 connectDB() // db conncection 
