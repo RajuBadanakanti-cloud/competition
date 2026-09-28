@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/user";
+const API_URL = import.meta.VITE_API_URL || "http://localhost:5000";
+
 const DEMO_USER_ID = "6aba20180dd0b90fe7958560";
 
 const Profile = () => {
@@ -19,7 +20,7 @@ const Profile = () => {
         setError("");
 
         const response = await axios.get(
-          `${API_URL}/${DEMO_USER_ID}`
+          `${API_URL}/api/user/${DEMO_USER_ID}`
         );
 
         setUser(response.data.user);
