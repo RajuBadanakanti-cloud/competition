@@ -4,7 +4,7 @@ import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-const DEMO_USER_ID = "6aba20180dd0b90fe7958560";
+const DEMO_USER_ID = "6aba542c8e59cebdafe51fd7"; // fixed hardcoded
 
 const Profile = () => {
   const [user, setUser] = useState(null);
