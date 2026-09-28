@@ -1,7 +1,8 @@
 import axios from "axios";
 
-// Base URL for participation APIs
-const API_URL = import.meta.VITE_API_URL || "http://localhost:5000";
+// Base URL
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 
 // Get all competitions in which a user participates
@@ -13,18 +14,23 @@ export const getUserParticipations = async (userId) => {
   return response.data;
 };
 
+
 // Register a user for a competition
 export const registerForCompetition = async (
   userId,
   competitionId
 ) => {
-  const response = await axios.post(API_URL, {
-    userId,
-    competitionId,
-  });
+  const response = await axios.post(
+    `${API_URL}/api/participation`,
+    {
+      userId,
+      competitionId,
+    }
+  );
 
   return response.data;
 };
+
 
 // Submit competition
 export const submitCompetition = async (

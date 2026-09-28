@@ -1,20 +1,21 @@
 import axios from "axios";
 
-// Base URL for competition APIs
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-const API_URL = import.meta.VITE_API_URL || "http://localhost:5000";
-
-
-// all
+// Get all competitions
 export const getAllCompetitions = async () => {
-  const response = await axios.get(`${API_URL}/api/competition`);
+  const response = await axios.get(
+    `${API_URL}/api/competition`
+  );
+
   return response.data;
 };
 
-// Get a single competition by ID
+// Get single competition
 export const getCompetitionById = async (competitionId) => {
   const response = await axios.get(
-    `${API_URL}/${competitionId}`
+    `${API_URL}/api/competition/${competitionId}`
   );
 
   return response.data;
